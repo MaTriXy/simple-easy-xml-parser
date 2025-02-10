@@ -1,8 +1,8 @@
 package com.novoda.demo.advanced.podcast.parser;
 
-import com.novoda.demo.advanced.podcast.pojo.PodcastItem;
 import com.novoda.demo.advanced.podcast.pojo.Author;
 import com.novoda.demo.advanced.podcast.pojo.Link;
+import com.novoda.demo.advanced.podcast.pojo.PodcastItem;
 import com.novoda.demo.advanced.podcast.pojo.Title;
 import com.novoda.demo.advanced.podcast.pojo.itunes.ItunesDuration;
 import com.novoda.sax.Element;
@@ -85,7 +85,7 @@ public class PodcastItemParser implements Parser<PodcastItem> {
 
     private static class ImageAttributeMarshaller implements AttributeMarshaller<Link> {
         @Override
-        public Link marshall(String... input) {
+        public Link marshal(String... input) {
             return new Link(input[0]);
         }
     }

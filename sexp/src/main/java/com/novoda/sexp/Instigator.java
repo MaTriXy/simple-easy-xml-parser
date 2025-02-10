@@ -13,8 +13,9 @@ public interface Instigator extends EndElementListener {
     RootTag getRootTag();
 
     /**
-     * This is where you create the 'tree' of
+     * This is where you traverse the xml 'tree' by using
      * {@link com.novoda.sexp.finder.ElementFinder ElementFinder}
+     * or {@link com.novoda.sexp.parser.Parser Parser}
      * objects to parse the XML.<br/><br/>
      * You can use the {@link com.novoda.sexp.finder.ElementFinderFactory ElementFinderFactory}
      * to create tree crawlers, or you can create your own if you implement one of:

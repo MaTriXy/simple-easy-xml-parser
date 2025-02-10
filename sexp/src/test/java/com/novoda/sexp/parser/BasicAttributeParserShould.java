@@ -1,7 +1,6 @@
 package com.novoda.sexp.parser;
 
 import com.novoda.sax.Element;
-
 import com.novoda.sexp.marshaller.AttributeMarshaller;
 
 import org.junit.Before;
@@ -44,7 +43,7 @@ public class BasicAttributeParserShould {
         Attributes attributes = mock(Attributes.class);
         stub(attributes.getValue(ATTR_TAG)).toReturn(FOUND_ATTRIBUTE);
         Object outputObject = new Object();
-        stub(mockMarshaller.marshall(FOUND_ATTRIBUTE)).toReturn(outputObject);
+        stub(mockMarshaller.marshal(FOUND_ATTRIBUTE)).toReturn(outputObject);
         cut.start(attributes);
 
         verify(mockParseWatcher).onParsed(outputObject);
@@ -58,7 +57,7 @@ public class BasicAttributeParserShould {
         stub(attributes.getValue(ATTR_TAG)).toReturn(FOUND_ATTRIBUTE);
         cut.start(attributes);
 
-        verify(mockMarshaller).marshall(FOUND_ATTRIBUTE);
+        verify(mockMarshaller).marshal(FOUND_ATTRIBUTE);
     }
 }
 

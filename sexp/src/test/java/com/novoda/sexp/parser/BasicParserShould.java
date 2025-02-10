@@ -1,7 +1,6 @@
 package com.novoda.sexp.parser;
 
 import com.novoda.sax.EndTextElementListener;
-
 import com.novoda.sexp.marshaller.BodyMarshaller;
 
 import org.junit.Before;
@@ -51,6 +50,6 @@ public class BasicParserShould {
 
         mockParse(basicParser, mockListener);
 
-        verify(mockMarshaller).marshall(any(String.class));
+        verify(mockMarshaller).marshal(any(String.class));
     }
 }
